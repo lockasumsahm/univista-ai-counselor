@@ -1,73 +1,222 @@
-# Welcome to your Lovable project
+<div align="center">
 
-## Project info
+# UniVista AI Counselor
 
-**URL**: https://lovable.dev/projects/bd6b201e-e0f5-477e-834a-40290285e7ab
+### AI-Powered University Admissions Intelligence
 
-## How can I edit this code?
+Helping students make smarter university decisions through AI-powered admissions analysis, personalized university matching, application planning, and academic guidance.
 
-There are several ways of editing your application.
+**🌐 Live Demo:** https://univista.inkspirehq.live
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/bd6b201e-e0f5-477e-834a-40290285e7ab) and start prompting.
+</div>
 
-Changes made via Lovable will be committed automatically to this repo.
+## About
 
-**Use your preferred IDE**
+UniVista AI Counselor is an AI-powered admissions platform designed to help students navigate the university application process with greater confidence.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The platform brings together admissions analysis, university matching, essay support, scholarship discovery, and application management into a single experience. It aims to 
+make high-quality admissions guidance more accessible through intelligent software.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+# Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Admissions Intelligence
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- AI-powered university matching
+- Admissions probability analysis
+- Personalized application strategy
+- Reach, target, and safety university recommendations
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Student Profile Analysis
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- Academic profile evaluation
+- Extracurricular assessment
+- Activity planning
+- Application readiness scoring
+
+### Essay Support
+
+- Essay feedback
+- Writing assistance
+- Draft improvement
+- Personal statement guidance
+
+### Application Management
+
+- Deadline tracking
+- Program tracking
+- University comparison
+- Application dashboard
+
+### Student Resources
+
+- Scholarship discovery
+- Country-specific guidance
+- Program exploration
+- AI counseling
+
+---
+
+# Technology Stack
+
+## Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+
+## Backend
+
+- Supabase
+- PostgreSQL
+- Edge Functions
+
+## AI
+
+- AI-powered recommendation engine
+- Intelligent profile analysis
+- Essay assistance
+- University matching
+
+---
+
+# Project Structure
+
+```
+src/
+│
+├── assets/
+├── components/
+├── contexts/
+├── hooks/
+├── integrations/
+├── lib/
+├── locales/
+├── pages/
+└── main.tsx
+
+public/
+
+supabase/
+
+docs/
+```
+
+---
+
+# Local Development
+
+Clone the repository
+
+```bash
+git clone https://github.com/lockasumsahm/univista-ai-counselor.git
+```
+
+Enter the project
+
+```bash
+cd univista-ai-counselor
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build production
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+Preview production build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run preview
+```
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+# Environment Variables
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Create a `.env` file.
 
-## How can I deploy this project?
+Example:
 
-Simply open [Lovable](https://lovable.dev/projects/bd6b201e-e0f5-477e-834a-40290285e7ab) and click on Share -> Publish.
+```env
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
+OPENAI_API_KEY=
+```
 
-## Can I connect a custom domain to my Lovable project?
+Never commit API keys or secrets.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Current Capabilities
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- University Matching
+- AI Counseling
+- Admissions Analysis
+- Essay Assistance
+- Scholarship Discovery
+- Deadline Tracking
+- Student Dashboard
+- Responsive Design
+- Progressive Web App
+- Multi-language Support
+
+---
+
+# Roadmap
+
+- AI Interview Preparation
+- Career Guidance
+- Mobile Application
+- University Partner Portal
+- Counselor Dashboard
+- Research Opportunity Matching
+- AI Academic Planner
+- Expanded International Support
+
+---
+
+# Deployment
+
+The application can be deployed on platforms supporting Vite applications, including:
+
+- Vercel
+- Netlify
+- Cloudflare Pages
+
+---
+
+# Website
+
+https://univista.inkspirehq.live
+
+---
+
+# Repository
+
+https://github.com/lockasumsahm/univista-ai-counselor
+
+---
+
+# License
+
+Copyright © 2026 Abdullah Amir.
+
+All rights reserved.
