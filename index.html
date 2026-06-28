@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <script>
+      (function() {
+        // Default to bright/light theme. Only apply dark when the user explicitly opted in.
+        var t = localStorage.getItem('univista-theme');
+        if (t === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="SyZ2-ua15jua3KqyBOlNOEaPZgxY4CetYH9-EjTWYFQ" />
+    <title>UniVista.AI — Free AI University Counselor</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!-- Preload critical LCP font files to remove the CSS->font request chain -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NJtEtq.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/figtree/v5/_Xmz-HUzqDCFdgfMm4q9DbpzlnE.woff2" />
+    <!-- Preload critical app entry to flatten HTML->JS request chain -->
+    <link rel="modulepreload" href="/src/main.tsx" />
+    <!-- Preload the font CSS so the browser fetches it in parallel with the HTML parse -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+    <meta name="description" content="Free AI university counselor with admission predictions, personalized university matches, essay coaching, and scholarship search across 500+ universities.">
+    <meta name="author" content="UniVista.AI" />
+    <meta name="keywords" content="university counseling, college admissions, AI counselor, CV analysis, scholarship finder, university matching">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fafbfc" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="UniVista" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/pwa-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/pwa-192x192.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/pwa-192x192.png" />
+    
+    <!-- Favicon -->
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://univista.inkspirehq.live/" />
+    
+    
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ef90766f-94eb-4405-bafb-cf7a8ba04d37">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@UniVistaAI" />
+    
+    
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ef90766f-94eb-4405-bafb-cf7a8ba04d37">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "UniVista.AI",
+      "url": "https://univista.inkspirehq.live",
+      "description": "AI-powered university counseling platform providing admission predictions, university matching, essay coaching, and scholarship search.",
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@univista.ai",
+        "contactType": "customer support"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "UniVista.AI",
+      "url": "https://univista.inkspirehq.live",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://univista.inkspirehq.live/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"How accurate are the admission probabilities?","acceptedAnswer":{"@type":"Answer","text":"Our 15-factor algorithm evaluates your profile using the same criteria real admissions committees use, including a difficulty multiplier for each university tier. While no tool can guarantee admission, our predictions provide realistic, data-driven estimates to help you build a balanced school list."}},
+        {"@type":"Question","name":"Is my data safe and private?","acceptedAnswer":{"@type":"Answer","text":"All data is encrypted with 256-bit encryption, stored securely, and never shared with universities, third parties, or used for advertising. You can delete all your data at any time from the Settings page."}},
+        {"@type":"Question","name":"Does it work for international students?","acceptedAnswer":{"@type":"Answer","text":"Yes. UniVista.AI supports students from 50+ countries and includes country-specific exam support (A-Levels, IB, Gaokao, national exams). The university database covers institutions in the US, UK, Canada, Australia, Europe, Asia, and more."}},
+        {"@type":"Question","name":"What is included in the free plan?","acceptedAnswer":{"@type":"Answer","text":"The free plan includes full profile analysis with all 15 factors, matching with up to 10 universities, AI counselor chat, basic essay coaching, deadline tracking, and program tracking. No credit card required."}},
+        {"@type":"Question","name":"How is this different from a human college counselor?","acceptedAnswer":{"@type":"Answer","text":"UniVista.AI provides instant, data-driven analysis available 24/7 in 7 languages — at a fraction of the cost of private counselors. It complements human guidance with the same holistic approach used by top admissions committees."}},
+        {"@type":"Question","name":"Can I use it for graduate school applications?","acceptedAnswer":{"@type":"Answer","text":"Currently UniVista.AI is optimized for undergraduate admissions. Graduate school support (including GRE/GMAT analysis and research experience evaluation) is on our roadmap and coming soon."}}
+      ]
+    }
+    </script>
+    
+  
+  <link rel="icon" type="image/png" href="/pwa-192x192.png">
+  
+  
+  
+  
+  <meta property="og:title" content="UniVista.AI — Free AI University Counselor">
+  <meta name="twitter:title" content="UniVista.AI — Free AI University Counselor">
+  <meta property="og:description" content="Free AI university counselor with admission predictions, personalized university matches, essay coaching, and scholarship search across 500+ universities.">
+  <meta name="twitter:description" content="Free AI university counselor with admission predictions, personalized university matches, essay coaching, and scholarship search across 500+ universities.">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

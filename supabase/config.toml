@@ -1,0 +1,22 @@
+project_id = "zzawyiwaslsuszfgodsj"
+
+[functions.university-counselor]
+verify_jwt = false
+
+[functions.chatbot-counselor]
+verify_jwt = false
+
+[functions.university-checker]
+verify_jwt = false
+
+[functions.analyze-document]
+verify_jwt = false
+
+[functions.gumroad-webhook]
+verify_jwt = false
+
+[functions.polar-webhook]
+verify_jwt = false
+
+[functions.process-email-queue]
+verify_jwt = true

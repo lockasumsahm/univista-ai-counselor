@@ -1,0 +1,18 @@
+# UniVista.AI
+
+> Free AI-powered university counselor providing admission probability predictions, personalized university matches, essay coaching, scholarship search, and application tracking for students worldwide.
+
+UniVista.AI helps students from 50+ countries plan and apply to universities. The platform uses a 15-factor admissions algorithm that mirrors the criteria real admissions committees use, plus AI tools for essay review, mock interviews, document analysis, and visa guidance.
+
+## Pages
+
+- [Home](/): Overview of UniVista.AI, features, testimonials, and FAQ.
+- [Pricing](/pricing): Free and Premium Pass plans with feature comparison.
+- [Sign in / Sign up](/auth): Account creation and login.
+- [Terms of Service](/terms): Legal terms of using UniVista.AI.
+- [Privacy Policy](/privacy): How user data is handled and protected.
+- [Refund Policy](/refund): Refund eligibility and process.
+
+## Optional
+
+- [Reset Password](/reset-password): Password reset flow.

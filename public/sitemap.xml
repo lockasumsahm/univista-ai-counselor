@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://univista.inkspirehq.live/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://univista.inkspirehq.live/auth</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://univista.inkspirehq.live/reset-password</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://univista.inkspirehq.live/pricing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://univista.inkspirehq.live/dashboard</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://univista.inkspirehq.live/dashboard/admitiq</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://univista.inkspirehq.live/dashboard/action-center</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://univista.inkspirehq.live/dashboard/profile</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://univista.inkspirehq.live/dashboard/profile/history</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://univista.inkspirehq.live/dashboard/results</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://univista.inkspirehq.live/dashboard/matches</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://univista.inkspirehq.live/dashboard/checker</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://univista.inkspirehq.live/dashboard/methodology</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://univista.inkspirehq.live/checkout/success</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://univista.inkspirehq.live/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://univista.inkspirehq.live/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://univista.inkspirehq.live/refund</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
