@@ -1,222 +1,85 @@
-<div align="center">
+# UniVista
+### Explainable university recommendations and application planning
 
-# UniVista AI Counselor
+A student-facing platform exploring how deterministic matching, bounded score adjustments, and AI assistance can make university planning easier to understand.
 
-### AI-Powered University Admissions Intelligence
+[Website](https://univista.inkspirehq.live) · [Scoring architecture](docs/intelligence.md) · [Calibration runbook](docs/calibration.md) · [Evaluation code](src/lib/__tests__/)
 
-Helping students make smarter university decisions through AI-powered admissions analysis, personalized university matching, application planning, and academic guidance.
+## The problem
 
-**🌐 Live Demo:** https://univista.inkspirehq.live
+University choices involve academic fit, finances, program preferences, and uncertain admissions outcomes. UniVista brings profile analysis, matching, essay support, and application planning into one interface, with technical work focused on making recommendations inspectable.
 
----
+## Technical focus
 
-</div>
+| Component | Approach | Inspect |
+| :--- | :--- | :--- |
+| Base matching | Deterministic candidate selection and scoring | [Match engine](src/lib/matchEngine.ts) |
+| Major adjustment | Bounded adjustment for program-specific admissions context | [Adjustment core](src/lib/majorRatesCore.ts) |
+| Outcome calibration | Versioned corrections with sample-size gates and capped shifts | [Calibration core](src/lib/calibrationCore.ts) |
+| Similar-profile retrieval | Semantic lookup with a keyword fallback | [Retrieval function](supabase/functions/verified-admits-match/index.ts) |
+| Explanation | Display how each scoring layer contributes | [Score journey](src/components/match/ScoreJourney.tsx) |
 
-## About
+The [architecture notes](docs/intelligence.md) document the scoring order, caps, fallbacks, and rollback approach. The [calibration runbook](docs/calibration.md) explains when corrections can activate.
 
-UniVista AI Counselor is an AI-powered admissions platform designed to help students navigate the university application process with greater confidence.
+**Scores are decision-support estimates. They are not guarantees or independently validated probabilities of admission.** A calibration implementation does not establish that enough outcome data exists to activate it.
 
-The platform brings together admissions analysis, university matching, essay support, scholarship discovery, and application management into a single experience. It aims to 
-make high-quality admissions guidance more accessible through intelligent software.
+## Application areas
 
----
+- Student profiles and university comparisons.
+- AI counseling, document analysis, and essay feedback.
+- Scholarship exploration and application planning.
+- Admissions outcome capture and recommendation explanations.
 
-# Features
+These areas are represented in the source; deployed behavior depends on the configured database, edge functions, and external services.
 
-### Admissions Intelligence
+## Stack
 
-- AI-powered university matching
-- Admissions probability analysis
-- Personalized application strategy
-- Reach, target, and safety university recommendations
+**React · TypeScript · Vite · Tailwind CSS · shadcn/ui**  
+Supabase authentication, PostgreSQL, and edge functions; pgvector-related retrieval.
 
-### Student Profile Analysis
-
-- Academic profile evaluation
-- Extracurricular assessment
-- Activity planning
-- Application readiness scoring
-
-### Essay Support
-
-- Essay feedback
-- Writing assistance
-- Draft improvement
-- Personal statement guidance
-
-### Application Management
-
-- Deadline tracking
-- Program tracking
-- University comparison
-- Application dashboard
-
-### Student Resources
-
-- Scholarship discovery
-- Country-specific guidance
-- Program exploration
-- AI counseling
-
----
-
-# Technology Stack
-
-## Frontend
-
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- shadcn/ui
-
-## Backend
-
-- Supabase
-- PostgreSQL
-- Edge Functions
-
-## AI
-
-- AI-powered recommendation engine
-- Intelligent profile analysis
-- Essay assistance
-- University matching
-
----
-
-# Project Structure
-
-```
-src/
-│
-├── assets/
-├── components/
-├── contexts/
-├── hooks/
-├── integrations/
-├── lib/
-├── locales/
-├── pages/
-└── main.tsx
-
-public/
-
-supabase/
-
-docs/
-```
-
----
-
-# Local Development
-
-Clone the repository
+## Local development
 
 ```bash
 git clone https://github.com/lockasumsahm/univista-ai-counselor.git
-```
-
-Enter the project
-
-```bash
 cd univista-ai-counselor
-```
-
-Install dependencies
-
-```bash
 npm install
 ```
 
-Run the development server
+Create `.env.local` using your own Supabase project's public configuration:
+
+```dotenv
+VITE_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=YOUR_PUBLIC_PUBLISHABLE_KEY
+```
 
 ```bash
 npm run dev
 ```
 
-Build production
+The frontend alone does not provision the backend. Review [database migrations](supabase/migrations/), [edge functions](supabase/functions/), and [function configuration](supabase/config.toml) before setting up a separate deployment. Configure private AI and service credentials on the backend; Vite-prefixed variables are exposed to the browser.
+
+## Validation
 
 ```bash
+npm run lint
 npm run build
+npx vitest run src/lib/__tests__/
 ```
 
-Preview production build
+The existing tests cover calibration and major-rate behavior, including bounded adjustments and fallback logic. Historical results are documented in the architecture notes; this documentation update does not claim a fresh application test run.
 
-```bash
-npm run preview
-```
+## Repository guide
 
----
+| Path | Purpose |
+| :--- | :--- |
+| `src/pages/` | Application routes and student workflows |
+| `src/components/` | Interface components and scoring explanations |
+| `src/lib/` | Matching, calibration, and supporting logic |
+| `supabase/functions/` | Server-side integrations |
+| `supabase/migrations/` | Database schema changes |
+| `docs/` | Architecture and operational notes |
 
-# Environment Variables
+## Ownership
 
-Create a `.env` file.
-
-Example:
-
-```env
-VITE_SUPABASE_URL=
-VITE_SUPABASE_ANON_KEY=
-OPENAI_API_KEY=
-```
-
-Never commit API keys or secrets.
-
----
-
-# Current Capabilities
-
-- University Matching
-- AI Counseling
-- Admissions Analysis
-- Essay Assistance
-- Scholarship Discovery
-- Deadline Tracking
-- Student Dashboard
-- Responsive Design
-- Progressive Web App
-- Multi-language Support
-
----
-
-# Roadmap
-
-- AI Interview Preparation
-- Career Guidance
-- Mobile Application
-- University Partner Portal
-- Counselor Dashboard
-- Research Opportunity Matching
-- AI Academic Planner
-- Expanded International Support
-
----
-
-# Deployment
-
-The application can be deployed on platforms supporting Vite applications, including:
-
-- Vercel
-- Netlify
-- Cloudflare Pages
-
----
-
-# Website
-
-https://univista.inkspirehq.live
-
----
-
-# Repository
-
-https://github.com/lockasumsahm/univista-ai-counselor
-
----
-
-# License
-
-Copyright © 2026 Abdullah Amir.
-
-All rights reserved.
+**Abdullah Amir** · [GitHub](https://github.com/lockasumsahm)  
+Copyright © 2026 Abdullah Amir. All rights reserved.
